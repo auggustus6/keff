@@ -10,16 +10,6 @@ const SectionAbout = () => {
     <Styles.Wrapper>
       <Container>
         <Styles.ContainerWrapper>
-          <iframe
-            width="100%"
-            height="409"
-            src="https://www.youtube.com/embed/EPkA3nWu8cM"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
           <Styles.ContainerInfo>
             <Title size="huge" color={theme.colors.primary}>
               O Pré Festa Oficial do Brasileiro
