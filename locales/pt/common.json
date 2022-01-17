@@ -1,0 +1,32 @@
+{
+  "test": {
+    "title": "Esse site é incrível!",
+    "text": "Concordo totalmente, é muuuuuito incrível!"
+  },
+  "button": {
+    "reach": "Contate-nos!"
+  },
+  "socialMedia": {
+    "message": "Acompanhe nossas novidades",
+    "follow": "Nos siga nas redes sociais"
+  },
+  "contactUs": {
+    "letTalk": "Vamos conversar?",
+    "sendMessage": "Manda uma mensagem!",
+    "otherChanel": "Ou entre em contato por nossos outros canais "
+  },
+  "allRights": {
+    "message": "Todos os direitos reservados 2021"
+  },
+  "developed": {
+    "smallText": "Desenvolvido com",
+    "and": "e",
+    "by": "por",
+    "companyName": "Ressacaps"
+  },
+  "pages": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  }
+}

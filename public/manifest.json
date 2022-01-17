@@ -1,0 +1,17 @@
+{
+    "name": "React Avançado - Boilerplate",
+    "short_name": "React Avançado",
+    "icons": [
+      {
+        "src": "/img/favicon.ico",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#06092b",
+    "description":"Projeto Basico com NEXT JS",
+    "background_color": "#06092b",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }

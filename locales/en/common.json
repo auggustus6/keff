@@ -1,0 +1,32 @@
+{
+  "test": {
+    "title": "This is an awesome website!",
+    "text":"Totally agree, this is reeeeeeeally awesome!"
+  },
+  "button": {
+    "reach": "Reach us out!"
+  },
+  "socialMedia": {
+    "message": "Follow our news",
+    "follow": "Follow us on social media"
+  },
+  "contactUs": {
+    "letTalk": "Let's talk?",
+    "sendMessage": "Send a message!",
+    "otherChanel": "Or contact us through our other channels"
+  },
+  "allRights": {
+    "message": "All rights reserved 2021"
+  },
+  "developed": {
+    "smallText": "Developed with",
+    "and": "and",
+    "by": "by",
+    "companyName": "LoneWolf Corporation"
+  },
+  "pages": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
