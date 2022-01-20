@@ -31,7 +31,7 @@ export default {
     black: "#141414",
     gray: "#8F8F8F",
     lightGray: "#E5E5E5",
-
+    dangerDark: "#f13003b",
     mainBg: "#141414",
     red: "#BC0000",
   },
