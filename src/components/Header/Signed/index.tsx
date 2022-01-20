@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/dist/client/router";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import Logo from "../../Logo";
 import MediaMatch from "../../MediaMatch";
 import * as Styles from "../styles";
 import MenuMobile from "../../MenuMobile";
+import Link from "next/link";
 import { useTheme } from "styled-components";
+import Anchor from "components/Anchor";
 
 const SignedHeader = () => {
   const router = useRouter();
@@ -53,34 +55,36 @@ const SignedHeader = () => {
           alternativeText="logotipo"
         />
 
-        {/* <MediaMatch lessThan="medium">
+        <MediaMatch lessThan="medium">
           <Styles.IconMenu aria-label="menu mobile" onClick={handleToggle}>
             {!expanded && <AiOutlineMenu size={30} color="#333" />}
             {expanded && <AiOutlineClose size={25} color="#333" />}
           </Styles.IconMenu>
-        </MediaMatch> */}
+        </MediaMatch>
 
-        {/* <MediaMatch greaterThan="medium">
+        <MediaMatch greaterThan="medium">
           <Styles.Menu>
             <Link href="/">
-              <Styles.ItensMenu active>
-                <Anchor>Home</Anchor>
+              <Styles.ItensMenu active={router.pathname == "/como-funciona"}>
+                <Anchor>Sobre nós</Anchor>
               </Styles.ItensMenu>
             </Link>
 
-            {!auth.signed ? (
-              <Styles.ItensMenu>
-                <Anchor>Login</Anchor>
+            <Link href="/">
+              <Styles.ItensMenu active={router.pathname == "/logistica"}>
+                <Anchor>Fale Conosco</Anchor>
               </Styles.ItensMenu>
-            ) : (
-              <Link href="/dashboard/estante-virtual">
-                <Styles.Avatar>
-                  <AiOutlineUser size={24} color={theme.colors.gray} />
-                </Styles.Avatar>
+            </Link>
+
+            <Styles.ContainerLogin>
+              <Link href="">
+                <div>
+                  <Anchor>Quero Começar</Anchor>
+                </div>
               </Link>
-            )}
+            </Styles.ContainerLogin>
           </Styles.Menu>
-        </MediaMatch> */}
+        </MediaMatch>
       </Styles.Content>
 
       {expanded && <MenuMobile handleNavigate={handleNavigateMenu} />}

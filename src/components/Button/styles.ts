@@ -1,11 +1,16 @@
 import styled, { css, DefaultTheme } from "styled-components";
 import { darken } from "polished";
 import { ButtonProps } from ".";
+import media from "styled-media-query";
 
 export const Wrapper = styled.button<ButtonProps>`
-  ${({ theme, disabled, fullWidth }) => css`
-    background: ${disabled ? theme.colors.lightGray : theme.colors.secondary};
-    color: ${theme.colors.white};
+  ${({ theme, disabled, fullWidth, backgroundColor, color }) => css`
+    background: ${disabled
+      ? theme.colors.lightGray
+      : backgroundColor
+      ? backgroundColor
+      : theme.colors.primary};
+    color: ${color ? color : theme.colors.white};
     min-height: 3.2rem;
     border: 0;
     font-size: ${theme.font.sizes.small};
@@ -13,7 +18,7 @@ export const Wrapper = styled.button<ButtonProps>`
     font-size: ${theme.font.sizes.xlarge};
     font-weight: bold;
 
-    width: ${fullWidth ? "100%" : "auto"};
+    width: ${fullWidth ? "100%" : "50%"};
     padding: ${theme.spacings.xsmall} ${theme.spacings.large};
     animation: pulse 2s infinite;
 
@@ -21,6 +26,10 @@ export const Wrapper = styled.button<ButtonProps>`
       background-color: ${darken(0.5, theme.colors.secondary)};
       transition: 0.5s;
     }
+
+    ${media.lessThan("medium")`
+      width:100%;
+    `}
 
     a {
       color: inherit;

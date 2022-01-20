@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     height: 100%;
 
     position: fixed;
+    top: 90px;
     z-index: 9;
     padding: ${theme.spacings.xxsmall};
   `}
@@ -27,6 +28,12 @@ export const ContentAvatar = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+    }
   `}
 `;
 
@@ -53,10 +60,14 @@ export const DataUser = styled.div`
     display: flex;
     flex-direction: column;
 
+    h4 {
+      font-size: ${theme.font.sizes.large};
+      color: ${theme.colors.primary};
+    }
+
     span {
-      &:last-child {
-        font-size: ${theme.font.sizes.xsmall};
-      }
+      font-size: ${theme.font.sizes.small};
+      color: ${theme.colors.gray};
     }
   `}
 `;
@@ -79,6 +90,13 @@ export const Card = styled.div`
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+    }
   `}
 `;
 

@@ -3,6 +3,7 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    background-color: #707070;
     padding: 9rem 0rem;
   `}
 `;
@@ -40,6 +41,6 @@ export const ContainerInfo = styled.div`
 
 export const Image = styled.img`
   ${({ theme }) => css`
-    max-width: 50%;
+    max-width: 70%;
   `}
 `;

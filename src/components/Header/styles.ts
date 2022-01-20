@@ -1,16 +1,18 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  border-bottom: 2rem solid ${({ theme }) => theme.colors.primary};
+`;
 
 export const Head = styled.div`
   ${({ theme }) => css`
     position: relative;
     min-height: 8rem;
-    background: ${theme.colors.darkBlack};
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     ${media.lessThan("medium")`
       padding:${theme.spacings.xxsmall} 0;
@@ -19,13 +21,11 @@ export const Head = styled.div`
 `;
 export const Content = styled.div`
   ${({ theme }) => css`
-    max-width: ${theme.grid.container};
-    margin: 0 auto;
-    padding: 0rem calc(${theme.grid.gutter} / 2);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
   `}
 `;
 
@@ -36,12 +36,7 @@ export const ContainerInput = styled.div`
 `;
 
 export const IconMenu = styled.div`
-  ${() => css`
-    position: absolute;
-    z-index: 9;
-    right: 1rem;
-    top: 1rem;
-  `}
+  ${() => css``}
 `;
 
 export const Menu = styled.nav`
@@ -63,6 +58,9 @@ export const ItensMenu = styled.div<{ active?: boolean }>`
     padding-left: ${theme.spacings.xsmall};
     padding-right: ${theme.spacings.xsmall};
 
+    display: flex;
+    align-items: center;
+
     ${media.lessThan("medium")`
           color:${theme.colors.white};
           &:hover {
@@ -71,7 +69,7 @@ export const ItensMenu = styled.div<{ active?: boolean }>`
       `}
 
     ${media.greaterThan("medium")`
-        font-size: ${theme.font.sizes.medium};
+        font-size: ${theme.font.sizes.xlarge};
         font-weight:300;
         
       &:hover {
@@ -97,5 +95,46 @@ export const Avatar = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  `}
+`;
+
+export const ContainerLogin = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small} ${theme.spacings.xlarge};
+    height: 5rem;
+
+    align-self: center;
+    border-radius: 9rem;
+    background: ${theme.colors.white};
+    animation: pulse 2s infinite;
+    color: ${theme.colors.black};
+    border: 2px solid #ccc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
   `}
 `;

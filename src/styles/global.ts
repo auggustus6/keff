@@ -99,7 +99,7 @@ const GlobalStyles: GlobalStyleComponent<
     }
 
     .swal-danger {
-      background-color: ${theme.colors.dangerDark} !important;
+      background-color: ${theme.colors.red} !important;
       color: ${theme.colors.white} !important;
     }
 
@@ -110,8 +110,8 @@ const GlobalStyles: GlobalStyleComponent<
 
 
       body {
-        background:${theme.colors.mainBg};
-        font-family: ${theme.font.family};
+        background:${theme.colors.white};
+        font-family: 'Raleway', sans-serif;
         font-size: ${theme.font.sizes.medium};
     `}
   `;

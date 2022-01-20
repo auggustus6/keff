@@ -3,6 +3,7 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    background-color: #aeaeae;
     padding: 9rem 0rem;
   `}
 `;
@@ -21,6 +22,7 @@ export const ContainerInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin-left: ${theme.spacings.small};
 
     p {
