@@ -20,8 +20,7 @@ const SectionPartners = () => {
               Para te oferecer um procedimento otimizado e de qualidade, a KEFF
               também conta com parceiros capacitados e com excelência na
               execução dos serviços. Você pode contar com a gente, estamos
-              preparados para potencializar o seu negócio. (colocar a logo dos
-              parceiros: Correios e Ativa Transportadora)
+              preparados para potencializar o seu negócio.
             </Paragraph>
 
             <div
