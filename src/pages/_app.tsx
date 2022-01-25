@@ -24,10 +24,10 @@ function App({ Component, pageProps }: AppProps) {
           <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
 
           <meta property="og:title" content="KEFFBR" />
-          <meta property="og:type" content="Pré-Festa infinito" />
-          <meta property="og:url" content="https://www.ressacaps.com.br" />
+          <meta property="og:type" content="A Keff é uma indústria farmacêutica que oferece suporte completo com as principais tendências do mercado para você que quer começar o seu próprio negócio" />
+          <meta property="og:url" content="http://keffbr.com.br/" />
           <meta property="og:image" content="/img/banner-1.png" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217124789-1"></script>
+    
 
 
 

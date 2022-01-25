@@ -70,12 +70,6 @@ const SignedHeader = () => {
               </Styles.ItensMenu>
             </Link>
 
-            <Link href="/">
-              <Styles.ItensMenu active={router.pathname == "/logistica"}>
-                <Anchor>Fale Conosco</Anchor>
-              </Styles.ItensMenu>
-            </Link>
-
             <Styles.ContainerLogin>
               <Link href="">
                 <div>

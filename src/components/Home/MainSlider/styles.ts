@@ -10,6 +10,8 @@ export const Wrapper = styled.div`
     max-width: 1400px;
     margin: 0 auto;
 
+    position: relative;
+
     .slick-arrow {
       display: flex !important;
       border-radius: 100%;
@@ -41,6 +43,28 @@ export const Image = styled.img`
 
     ${media.lessThan("medium")`
         max-width:100%;
+    `}
+  `}
+`;
+
+export const SliderContainer = styled.div`
+  ${({ theme }) => css`
+    ${media.lessThan("medium")`
+     display:none;
+    `}
+  `}
+`;
+
+export const FormContainer = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+
+    ${media.lessThan("medium")`
+        max-width:100%;
+        width:100%;
+        position:relative;
     `}
   `}
 `;

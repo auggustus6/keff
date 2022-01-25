@@ -39,28 +39,12 @@ export default class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Suplemento alimentar ultraconcentrado que mantém seu organismo disposto e saudável durante e após uma boa festa!"
-          />
-          <meta
-            name="adopt-website-id"
-            content="ca6e383d-20ea-4012-ac71-40d8b32f8773"
-          />
-
-          <meta
-            name="facebook-domain-verification"
-            content="bg23hg1yi3nrg4o9fdmt467kzg0qe9"
+            content="A Keff é uma indústria farmacêutica que oferece suporte completo com as principais tendências do mercado para você que quer começar o seu próprio negócio"
           />
         </Head>
         <body>
           <Main />
           <NextScript />
-
-          <script
-            async
-            src="//tag.goadopt.io/injector.js?website_code=ca6e383d-20ea-4012-ac71-40d8b32f8773"
-            className="adopt-injector"
-          ></script>
-          <script>window.adoptHideAfterConsent = true;</script>
         </body>
       </Html>
     );

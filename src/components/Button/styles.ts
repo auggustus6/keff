@@ -25,6 +25,9 @@ export const Wrapper = styled.button<ButtonProps>`
     &:hover {
       background-color: ${darken(0.5, theme.colors.secondary)};
       transition: 0.5s;
+      * {
+        color: ${theme.colors.white};
+      }
     }
 
     ${media.lessThan("medium")`

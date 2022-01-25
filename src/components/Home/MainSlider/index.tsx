@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import { FormCompleteContainer } from "../../Form/components/FormComplete";
 import * as Styles from "./styles";
 
 const settings = {
@@ -15,10 +16,18 @@ const settings = {
 const MainSlider = () => {
   return (
     <Styles.Wrapper>
-      <Slider {...settings}>
-        <Styles.Image src="img/banner-1.png" alt="garota mexendo no celular" />
-        <Styles.Image src="img/banner-2.png" alt="garota mexendo no celular" />
-      </Slider>
+      <Styles.FormContainer>
+        <FormCompleteContainer />
+      </Styles.FormContainer>
+      <Styles.SliderContainer>
+        <Slider {...settings}>
+          {/* <Styles.Image src="img/banner-1.png" alt="garota mexendo no celular" /> */}
+          <Styles.Image
+            src="img/banner-2.png"
+            alt="farmaceutica manipulando encapasulado."
+          />
+        </Slider>
+      </Styles.SliderContainer>
     </Styles.Wrapper>
   );
 };
