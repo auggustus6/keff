@@ -66,15 +66,15 @@ const Footer = () => {
                 <span>sac.keffbr@keffbr.com.br</span>
               </a>
             </Styles.Social>
-            {/* 
+
             <div className="terms">
               <Link href="/termos-de-uso">
                 <span>Termos de uso</span>
               </Link>
-              <Link href="/politica-de-privacidade">
+              {/* <Link href="/politica-de-privacidade">
                 <span>Politica de privacidade</span>
-              </Link>
-            </div> */}
+              </Link> */}
+            </div>
           </Styles.Block>
         </Styles.Container>
       </Styles.Wrapper>
