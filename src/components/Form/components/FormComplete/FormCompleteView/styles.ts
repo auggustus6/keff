@@ -6,7 +6,7 @@ export const Container = styled(Wrapper)`
   ${({ theme }) => css`
     display: flex;
     background: rgba(255, 255, 255, 0.9);
-    max-width: 60%;
+    max-width: 90%;
     border-radius: 5px;
 
     align-items: center;
@@ -28,6 +28,7 @@ export const Container = styled(Wrapper)`
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
 
       input,
       select {

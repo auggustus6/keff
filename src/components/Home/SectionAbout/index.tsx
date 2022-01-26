@@ -36,9 +36,11 @@ const SectionAbout = () => {
             </Paragraph>
 
             <Button fullWidth backgroundColor={theme.colors.primary}>
-              <Paragraph size="xxlarge" color="white" fontWeight="bold">
-                QUERO MINHA FÓRMULA
-              </Paragraph>
+              <a href="#quero_comecar">
+                <Paragraph size="xxlarge" color="white" fontWeight="bold">
+                  QUERO MINHA FÓRMULA
+                </Paragraph>
+              </a>
             </Button>
           </Styles.ContainerInfo>
           <Styles.Image

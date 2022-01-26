@@ -15,7 +15,7 @@ const settings = {
 };
 const MainSlider = () => {
   return (
-    <Styles.Wrapper>
+    <Styles.Wrapper id="quero_comecar">
       <Styles.FormContainer>
         <FormCompleteContainer />
       </Styles.FormContainer>

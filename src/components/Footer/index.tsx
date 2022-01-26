@@ -37,7 +37,7 @@ const Footer = () => {
             <span>{t("socialMedia.follow")}</span>
             <Styles.Social>
               <a
-                href="https://www.facebook.com/Ressacaps-107982341743398"
+                href="https://m.facebook.com/KEFF-107873608320145/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="facebook"
@@ -45,7 +45,7 @@ const Footer = () => {
                 <img src="/svgs/facebook.svg" />
               </a>
               <a
-                href="https://www.instagram.com/ressacaps/"
+                href="https://instagram.com/keff.br?utm_medium=copy_link"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="instagram"
@@ -54,7 +54,7 @@ const Footer = () => {
               </a>
             </Styles.Social>
 
-            <NewsLetter />
+            {/* <NewsLetter /> */}
           </Styles.Block>
 
           <Styles.Block>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <span>sac.keffbr@keffbr.com.br</span>
               </a>
             </Styles.Social>
-
+            {/* 
             <div className="terms">
               <Link href="/termos-de-uso">
                 <span>Termos de uso</span>
@@ -74,7 +74,7 @@ const Footer = () => {
               <Link href="/politica-de-privacidade">
                 <span>Politica de privacidade</span>
               </Link>
-            </div>
+            </div> */}
           </Styles.Block>
         </Styles.Container>
       </Styles.Wrapper>

@@ -89,9 +89,11 @@ const SectionSteps = () => {
             </Styles.Grid>
 
             <Button backgroundColor="white" color={theme.colors.black}>
-              <Paragraph size="xxlarge" color="black" fontWeight="bold">
-                REALIZE SEU SONHO
-              </Paragraph>
+              <a href="#quero_comecar">
+                <Paragraph size="xxlarge" color="black" fontWeight="bold">
+                  REALIZE SEU SONHO
+                </Paragraph>
+              </a>
             </Button>
           </Styles.ContainerInfo>
         </Styles.ContainerWrapper>

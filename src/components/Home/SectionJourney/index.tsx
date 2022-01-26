@@ -25,9 +25,11 @@ const SectionJourney = () => {
             </Paragraph>
 
             <Button fullWidth backgroundColor="white" color="black">
-              <Paragraph size="xlarge" color="black" fontWeight="bold">
-                CADASTRAR AGORA
-              </Paragraph>
+              <a href="#quero_comecar">
+                <Paragraph size="xlarge" color="black" fontWeight="bold">
+                  CADASTRAR AGORA
+                </Paragraph>
+              </a>
             </Button>
           </Styles.ContainerInfo>
           <Styles.Image src="/img/icons/icon-12.png" />

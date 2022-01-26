@@ -1,18 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/dist/client/router";
-import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../../Logo";
 import MediaMatch from "../../MediaMatch";
-import * as Styles from "../styles";
 import MenuMobile from "../../MenuMobile";
 import Link from "next/link";
-import { useTheme } from "styled-components";
 import Anchor from "components/Anchor";
+import { Container } from "components/Container";
+import * as Styles from "../styles";
 
 const SignedHeader = () => {
   const router = useRouter();
   const [expanded, setExpanded] = useState(false);
-  const theme = useTheme();
 
   const _mounted = useRef(true);
 
@@ -47,42 +46,44 @@ const SignedHeader = () => {
   };
 
   return (
-    <Styles.Head>
-      <Styles.Content>
-        <Logo
-          onClick={handleRoute}
-          url="/img/logo.png"
-          alternativeText="logotipo"
-        />
+    <Container>
+      <Styles.Head>
+        <Styles.Content>
+          <Logo
+            onClick={handleRoute}
+            url="/img/logo.png"
+            alternativeText="logotipo"
+          />
 
-        <MediaMatch lessThan="medium">
-          <Styles.IconMenu aria-label="menu mobile" onClick={handleToggle}>
-            {!expanded && <AiOutlineMenu size={30} color="#333" />}
-            {expanded && <AiOutlineClose size={25} color="#333" />}
-          </Styles.IconMenu>
-        </MediaMatch>
+          <MediaMatch lessThan="medium">
+            <Styles.IconMenu aria-label="menu mobile" onClick={handleToggle}>
+              {!expanded && <AiOutlineMenu size={30} color="#333" />}
+              {expanded && <AiOutlineClose size={25} color="#333" />}
+            </Styles.IconMenu>
+          </MediaMatch>
 
-        <MediaMatch greaterThan="medium">
-          <Styles.Menu>
-            <Link href="/">
-              <Styles.ItensMenu active={router.pathname == "/como-funciona"}>
-                <Anchor>Sobre nós</Anchor>
-              </Styles.ItensMenu>
-            </Link>
+          <MediaMatch greaterThan="medium">
+            <Styles.Menu>
+              {/* <Link href="/">
+                <Styles.ItensMenu active={router.pathname == "/como-funciona"}>
+                  <Anchor>Sobre nós</Anchor>
+                </Styles.ItensMenu>
+              </Link> */}
 
-            <Styles.ContainerLogin>
-              <Link href="">
-                <div>
-                  <Anchor>Quero Começar</Anchor>
-                </div>
-              </Link>
-            </Styles.ContainerLogin>
-          </Styles.Menu>
-        </MediaMatch>
-      </Styles.Content>
+              <Styles.ContainerLogin>
+                <Link href="#quero_comecar">
+                  <div>
+                    <Anchor>Quero Começar</Anchor>
+                  </div>
+                </Link>
+              </Styles.ContainerLogin>
+            </Styles.Menu>
+          </MediaMatch>
+        </Styles.Content>
 
-      {expanded && <MenuMobile handleNavigate={handleNavigateMenu} />}
-    </Styles.Head>
+        {expanded && <MenuMobile handleNavigate={handleNavigateMenu} />}
+      </Styles.Head>
+    </Container>
   );
 };
 

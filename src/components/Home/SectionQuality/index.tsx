@@ -14,9 +14,11 @@ const SectionQuality = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             <Styles.Image src="/img/icons/icon-11.png" />
             <Button style={{ marginTop: 20 }} fullWidth>
-              <Paragraph size="xxlarge" fontWeight="bold" color="white">
-                GARANTA O SEU FUTURO COM A KEFF
-              </Paragraph>
+              <a href="#quero_comecar">
+                <Paragraph size="xxlarge" fontWeight="bold" color="white">
+                  GARANTA O SEU FUTURO COM A KEFF
+                </Paragraph>
+              </a>
             </Button>
           </div>
           <Styles.ContainerInfo>

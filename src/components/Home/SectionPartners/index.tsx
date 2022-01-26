@@ -42,9 +42,11 @@ const SectionPartners = () => {
               />
             </div>
             <Button backgroundColor="white" color="black" fullWidth>
-              <Paragraph size="xxlarge" color="black" fontWeight="bold">
-                QUERO INICIAR MEU PROJETO
-              </Paragraph>
+              <a href="#quero_comecar">
+                <Paragraph size="xxlarge" color="black" fontWeight="bold">
+                  QUERO INICIAR MEU PROJETO
+                </Paragraph>
+              </a>
             </Button>
           </Styles.ContainerInfo>
           <Styles.Image
