@@ -40,9 +40,6 @@ export const FormCompleteContainer = () => {
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
 
-    router.push("cadastro-sucesso");
-    return;
-
     try {
       await fetch(
         "https://script.google.com/macros/s/AKfycbxuBD4OtVlIMuB74bNXNsX9rduKcN2HU0_fdtX7FT1zpo_QLjy_IrcEpG-UlFq5pmGhQg/exec",
@@ -53,6 +50,7 @@ export const FormCompleteContainer = () => {
       );
       resetForm();
       setMessage("Formulário enviado com sucesso!");
+      router.push("cadastro-sucesso");
     } catch (err) {
       setMessage("Erro ao enviar formulário");
     } finally {
