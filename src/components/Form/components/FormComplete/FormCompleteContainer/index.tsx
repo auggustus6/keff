@@ -1,8 +1,10 @@
 import { FormDataProps } from "../../../types";
 import { useEffect, useState } from "react";
 import { FormCompleteView } from "../index";
+import { useRouter } from "next/router";
 
 export const FormCompleteContainer = () => {
+  const router = useRouter();
   const [data, setData] = useState<FormDataProps>({
     name: "",
     email: "",
@@ -37,6 +39,9 @@ export const FormCompleteContainer = () => {
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
+
+    router.push("cadastro-sucesso");
+    return;
 
     try {
       await fetch(
