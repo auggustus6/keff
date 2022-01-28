@@ -15,7 +15,7 @@ const ConsultantSuccessTemplate = () => {
           Parabéns, cadastro feito com sucesso!!
         </Title>
 
-        <Paragraph size="medium" align="center" color={theme.colors.black}>
+        <Paragraph size="medium" color={theme.colors.black}>
           Fique tranquilo, em breve vamos entrar em contato com você por
           WhatsApp para tirar todas as dúvidas!
         </Paragraph>
