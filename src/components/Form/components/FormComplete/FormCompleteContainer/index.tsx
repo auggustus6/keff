@@ -2,6 +2,7 @@ import { FormDataProps } from "../../../types";
 import { useEffect, useState } from "react";
 import { FormCompleteView } from "../index";
 import { useRouter } from "next/router";
+import { format } from "date-fns";
 
 export const FormCompleteContainer = () => {
   const router = useRouter();
@@ -39,6 +40,7 @@ export const FormCompleteContainer = () => {
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
+    form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     try {
       await fetch(
