@@ -29,6 +29,14 @@ function App({ Component, pageProps }: AppProps) {
           <meta property="og:image" content="/img/banner-1.png" />
           <meta name="facebook-domain-verification" content="hebz6incj4nyf3536cgtqs02epu1d2" />
 
+          <script  id="mcjs">
+          {
+            `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ed5da9de447f44d3ebe2fcaf6/ab8a7202cab75407f681992f3.js");
+            `
+          }
+
+          </script>
+
           <script>
             {
               `
