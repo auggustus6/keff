@@ -21,46 +21,63 @@ const _FormCompleteView = ({
   return (
     <Styles.Container>
       <h4>Agora você pode criar sua própria marca!</h4>
-      <form onSubmit={onSubmit}>
-        <input
-          onChange={(e) => handleChangeData({ ...data, name: e.target.value })}
-          value={data.name}
-          placeholder="Nome completo"
-          required
-        />
-        <input
-          onChange={(e) => handleChangeData({ ...data, email: e.target.value })}
-          placeholder="Email"
-          value={data.email}
-          type="email"
-          required
-        />
-
-        <InputMask
-          onChange={(e) => handleChangeData({ ...data, phone: e.target.value })}
-          placeholder="Telefone"
-          value={data.phone}
-          required
-          mask="+55\ 99 9999 99999"
-        />
-        <span>Você já trabalha no mercado de encapsulados?</span>
-        <select
-          required
-          value={data.visited}
-          onChange={(e) =>
-            handleChangeData({ ...data, visited: e.target.value })
-          }
+      <div id="mc_embed_signup">
+        <form
+          onSubmit={onSubmit}
+          action="https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          className="validate"
+          target="_blank"
         >
-          <option value="Sim">Sim</option>
-          <option value="Não">Não</option>
-        </select>
+          <div id="mc_embed_signup_scroll">
+            <input
+              id="mce-FNAME"
+              onChange={(e) =>
+                handleChangeData({ ...data, name: e.target.value })}
+              value={data.name}
+              placeholder="Nome completo"
+              required
+            />
+            <input
+              id="mce-EMAIL"
+              onChange={(e) =>
+                handleChangeData({ ...data, email: e.target.value })}
+              placeholder="Email"
+              value={data.email}
+              type="email"
+              required
+            />
+            <InputMask
+              id="mce-PHONE"
+              onChange={(e) =>
+                handleChangeData({ ...data, phone: e.target.value })}
+              placeholder="Telefone"
+              value={data.phone}
+              required
+              mask="+55\ 99 9999 99999"
+            />
+            <span>Você já trabalha no mercado de encapsulados?</span>
+            <select
+              required
+              value={data.visited}
+              onChange={(e) =>
+                handleChangeData({ ...data, visited: e.target.value })
+              }
+            >
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
 
-        <button disabled={loading} type="submit">
-          {loading ? "ENVIANDO..." : "ENVIAR"}
-        </button>
+            <button disabled={loading} type="submit">
+              {loading ? "ENVIANDO..." : "ENVIAR"}
+            </button>
 
-        {message && <span className="form-status">{message}</span>}
-      </form>
+            {message && <span className="form-status">{message}</span>}
+          </div>
+        </form>
+      </div>
     </Styles.Container>
   );
 };

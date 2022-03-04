@@ -28,8 +28,10 @@ export const FormCompleteContainer = () => {
       visited: "Sim",
     });
   };
+  console.log('data fora??', data);
 
-  const handleSubmit = async (event: React.SyntheticEvent) => {
+  const handleSubmit = async (event: React.SyntheticEvent) => {  
+
     event.preventDefault();
     setLoading(true);
 
