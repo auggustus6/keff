@@ -18,8 +18,8 @@ const MainSlider = () => {
   return (
     <Styles.Wrapper id="quero_comecar">
       <Styles.FormContainer>
-        {/* <FormCompleteContainer /> */}
-        <div id="mc_embed_signup">
+        <FormCompleteContainer />
+        {/* <div id="mc_embed_signup">
           <form
             action="https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e"
             method="post"
@@ -65,6 +65,21 @@ const MainSlider = () => {
                   id="mce-PHONE"
                 />
               </div>
+
+              <div className="mc-field-group size1of2">
+                <label htmlFor="mce-EMAIL">
+                  Voce trabalha com encapasulado?{" "}
+                  <span className="asterisk">*</span>
+                </label>
+                <input
+                  type="text"
+                  value=""
+                  name="FNAME"
+                  className=""
+                  id="mce-FNAME"
+                />
+              </div>
+
               <div id="mce-responses" className="clear foot">
                 <div
                   className="response"
@@ -96,19 +111,11 @@ const MainSlider = () => {
                     id="mc-embedded-subscribe"
                     className="button"
                   />
-                  <p className="brandingLogo">
-                    <a
-                      href="http://eepurl.com/hVrBWf"
-                      title="Mailchimp - email marketing made easy and fun"
-                    >
-                      <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" />
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
       </Styles.FormContainer>
       <Styles.SliderContainer>
         <Slider {...settings}>
