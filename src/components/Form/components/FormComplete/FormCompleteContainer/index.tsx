@@ -28,10 +28,9 @@ export const FormCompleteContainer = () => {
       visited: "Sim",
     });
   };
-  console.log('data fora??', data);
 
-  const handleSubmit = async (event: React.SyntheticEvent) => {  
-
+  const handleSubmit = async (event: React.SyntheticEvent) => {
+    console.log("data fora??", data);
     event.preventDefault();
     setLoading(true);
 
@@ -52,8 +51,25 @@ export const FormCompleteContainer = () => {
           body: form,
         },
       );
-      resetForm();
       setMessage("Formulário enviado com sucesso!");
+      router.push("cadastro-sucesso");
+    } catch (err) {
+      setMessage("Erro ao enviar formulário");
+    } finally {
+      setLoading(false);
+    }
+
+    try {
+      setLoading(true);
+      await fetch(
+        "https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e",
+        {
+          mode: "no-cors",
+          method: "POST",
+        },
+      );
+      resetForm();
+      setMessage("Email enviado com sucesso!");
       router.push("cadastro-sucesso");
     } catch (err) {
       setMessage("Erro ao enviar formulário");

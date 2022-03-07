@@ -21,11 +21,9 @@ const _FormCompleteView = ({
   return (
     <Styles.Container>
       <h4>Agora você pode criar sua própria marca!</h4>
-      <div id="mc_embed_signup">
+      <div /* id="mc_embed_signup" */>
         <form
           onSubmit={onSubmit}
-          action="https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e"
-          method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
           className="validate"
@@ -34,16 +32,20 @@ const _FormCompleteView = ({
           <div id="mc_embed_signup_scroll">
             <input
               id="mce-FNAME"
+              name="FNAME"
               onChange={(e) =>
-                handleChangeData({ ...data, name: e.target.value })}
+                handleChangeData({ ...data, name: e.target.value })
+              }
               value={data.name}
               placeholder="Nome completo"
               required
             />
             <input
               id="mce-EMAIL"
+              name="EMAIL"
               onChange={(e) =>
-                handleChangeData({ ...data, email: e.target.value })}
+                handleChangeData({ ...data, email: e.target.value })
+              }
               placeholder="Email"
               value={data.email}
               type="email"
@@ -51,8 +53,10 @@ const _FormCompleteView = ({
             />
             <InputMask
               id="mce-PHONE"
+              name="PHONE"
               onChange={(e) =>
-                handleChangeData({ ...data, phone: e.target.value })}
+                handleChangeData({ ...data, phone: e.target.value })
+              }
               placeholder="Telefone"
               value={data.phone}
               required
