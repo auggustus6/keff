@@ -3,6 +3,7 @@ import router from "next/router";
 import { FormDataProps } from "components/Form/types";
 import * as Styles from "./styles";
 import InputMask from "react-input-mask";
+import { format } from "date-fns";
 
 type NewsLetterFormType = {
   status: any;
@@ -57,7 +58,7 @@ export const NewsLetterForm = ({
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
-    // form.append("Data", format(new Date(), "dd/MM/yyyy"));
+    form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     try {
       await fetch(
@@ -68,7 +69,7 @@ export const NewsLetterForm = ({
         },
       );
       resetForm();
-      setMessage("Planilha e email enviados com sucesso!");
+      setMessage("Dados enviados com sucesso!");
       router.push("cadastro-sucesso");
     } catch (err) {
       setMessage("Erro ao enviar formulário");
