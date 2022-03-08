@@ -21,13 +21,11 @@ const _FormCompleteView = ({
   return (
     <Styles.Container>
       <h4>Agora você pode criar sua própria marca!</h4>
-      <div /* id="mc_embed_signup" */>
+      <div id="mc_embed_signup">
         <form
-          onSubmit={onSubmit}
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          className="validate"
-          target="_blank"
+          onSubmit={onSubmit}
         >
           <div id="mc_embed_signup_scroll">
             <input
@@ -74,7 +72,12 @@ const _FormCompleteView = ({
               <option value="Não">Não</option>
             </select>
 
-            <button disabled={loading} type="submit">
+            <button
+              disabled={loading}
+              type="submit"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+            >
               {loading ? "ENVIANDO..." : "ENVIAR"}
             </button>
 
