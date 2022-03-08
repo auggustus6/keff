@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { FormCompleteContainer } from "../../Form/components/FormComplete";
+import { MailChimpFormContainer } from "../../Form/components/FormComplete/MailChimpForm";
 import * as Styles from "./styles";
 
 const settings = {
@@ -18,7 +19,8 @@ const MainSlider = () => {
   return (
     <Styles.Wrapper id="quero_comecar">
       <Styles.FormContainer>
-        <FormCompleteContainer />
+        {/* <FormCompleteContainer /> */}
+        <MailChimpFormContainer />
         {/* <div id="mc_embed_signup">
           <form
             action="https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e"

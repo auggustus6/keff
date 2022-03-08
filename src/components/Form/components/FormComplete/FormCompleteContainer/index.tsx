@@ -1,5 +1,6 @@
 import { FormDataProps } from "../../../types";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { FormCompleteView } from "../index";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
@@ -30,8 +31,9 @@ export const FormCompleteContainer = () => {
   };
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
+    console.log("data fora??", data);
     event.preventDefault();
-    setLoading(true);
+    // setLoading(true);
 
     const { name, email, phone, visited } = data;
 
@@ -42,22 +44,22 @@ export const FormCompleteContainer = () => {
     form.append("Encapsulados", visited);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxuBD4OtVlIMuB74bNXNsX9rduKcN2HU0_fdtX7FT1zpo_QLjy_IrcEpG-UlFq5pmGhQg/exec",
-        {
-          method: "POST",
-          body: form,
-        },
-      );
-      resetForm();
-      setMessage("Formulário enviado com sucesso!");
-      router.push("cadastro-sucesso");
-    } catch (err) {
-      setMessage("Erro ao enviar formulário");
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   await fetch(
+    //     "https://script.google.com/macros/s/AKfycbxuBD4OtVlIMuB74bNXNsX9rduKcN2HU0_fdtX7FT1zpo_QLjy_IrcEpG-UlFq5pmGhQg/exec",
+    //     {
+    //       method: "POST",
+    //       body: form,
+    //     },
+    //   );
+    //   resetForm();
+    //   setMessage("Formulário enviado com sucesso!");
+    //   router.push("cadastro-sucesso");
+    // } catch (err) {
+    //   setMessage("Erro ao enviar formulário");
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   useEffect(() => {
