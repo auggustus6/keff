@@ -1,3 +1,5 @@
+import { FormDataProps } from "components/Form/types";
+import router from "next/router";
 import { useState } from "react";
 
 type NewsLetterFormType = {
@@ -7,26 +9,84 @@ type NewsLetterFormType = {
 };
 
 export const NewsLetterForm = ({
-  status,
-  message,
+  // status,
+  // message,
   onValidated,
 }: NewsLetterFormType) => {
-  const [fName, setFName] = useState<string | undefined>("");
-  const [email, setEmail] = useState<string | undefined>("");
-  const [phone, setPhone] = useState<string | undefined>("");
+  // MailChimp States
+  // const [fName, setFName] = useState<string | undefined>("");
+  // const [email, setEmail] = useState<string | undefined>("");
+  // const [phone, setPhone] = useState<string | undefined>("");
+  // Plain States
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState<FormDataProps>({
+    name: "",
+    email: "",
+    phone: "",
+    visited: "Não",
+  });
 
-  const handleSubmit = (e: any) => {
+  const resetForm = () => {
+    setData({
+      name: "",
+      email: "",
+      phone: "",
+      visited: "Sim",
+    });
+  };
+  const { name, email, phone, visited } = data;
+
+  const handleChangeData = (data: FormDataProps) => {
+    setData(data);
+  };
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
-    fName &&
+    name &&
       email &&
       phone &&
       email.indexOf("@") > -1 &&
       onValidated({
-        FNAME: fName,
+        FNAME: name,
         EMAIL: email,
         PHONE: phone,
       });
+    // fName &&
+    //   email &&
+    //   phone &&
+    //   email.indexOf("@") > -1 &&
+    //   onValidated({
+    //     FNAME: fName,
+    //     EMAIL: email,
+    //     PHONE: phone,
+    //   });
+
+    const form = new FormData();
+    form.append("Nome", name);
+    form.append("Email", email);
+    form.append("Telefone", phone);
+    form.append("Encapsulados", visited);
+    // form.append("Data", format(new Date(), "dd/MM/yyyy"));
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxuBD4OtVlIMuB74bNXNsX9rduKcN2HU0_fdtX7FT1zpo_QLjy_IrcEpG-UlFq5pmGhQg/exec",
+        {
+          method: "POST",
+          body: form,
+        },
+      );
+      resetForm();
+      setMessage("Planilha e email enviados com sucesso!");
+      router.push("cadastro-sucesso");
+    } catch (err) {
+      setMessage("Erro ao enviar formulário");
+    } finally {
+      setLoading(false);
+    }
   };
 
   // const getMessage = (message) => {
@@ -52,9 +112,9 @@ export const NewsLetterForm = ({
           <div className="mc-field-group">
             <label htmlFor="mce-FNAME">Nome </label>
             <input
-              onChange={(e) => setFName(e.target.value)}
+              onChange={(e) => setData({ ...data, name: e.target.value })}
               type="text"
-              value={fName}
+              value={name}
               name="FNAME"
               className=""
               id="mce-FNAME"
@@ -65,7 +125,7 @@ export const NewsLetterForm = ({
               E-mail <span className="asterisk">*</span>
             </label>
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setData({ ...data, email: e.target.value })}
               type="email"
               value={email}
               name="EMAIL"
@@ -76,7 +136,7 @@ export const NewsLetterForm = ({
           <div className="mc-field-group">
             <label htmlFor="mce-PHONE">Celular </label>
             <input
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setData({ ...data, phone: e.target.value })}
               type="text"
               name="PHONE"
               className=""
@@ -131,6 +191,8 @@ export const NewsLetterForm = ({
                 className="button"
                 onClick={(e) => handleSubmit(e)}
               />
+
+              {message && <span className="form-status">{message}</span>}
             </div>
           </div>
         </div>

@@ -21,16 +21,10 @@ const _FormCompleteView = ({
   return (
     <Styles.Container>
       <h4>Agora você pode criar sua própria marca!</h4>
-      <div id="mc_embed_signup">
-        <form
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          onSubmit={onSubmit}
-        >
-          <div id="mc_embed_signup_scroll">
+      <div>
+        <form onSubmit={onSubmit}>
+          <div>
             <input
-              id="mce-FNAME"
-              name="FNAME"
               onChange={(e) =>
                 handleChangeData({ ...data, name: e.target.value })
               }
@@ -39,8 +33,6 @@ const _FormCompleteView = ({
               required
             />
             <input
-              id="mce-EMAIL"
-              name="EMAIL"
               onChange={(e) =>
                 handleChangeData({ ...data, email: e.target.value })
               }
@@ -50,8 +42,6 @@ const _FormCompleteView = ({
               required
             />
             <InputMask
-              id="mce-PHONE"
-              name="PHONE"
               onChange={(e) =>
                 handleChangeData({ ...data, phone: e.target.value })
               }

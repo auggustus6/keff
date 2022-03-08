@@ -17,12 +17,6 @@ export const FormCompleteContainer = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const formMail = {
-    MERGE0: data.name,
-    MERGE1: data.email,
-    MERGE2: data.phone,
-  };
-
   const handleChangeData = (data: FormDataProps) => {
     setData(data);
   };
@@ -43,56 +37,12 @@ export const FormCompleteContainer = () => {
 
     const { name, email, phone, visited } = data;
 
-    const options = {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        // Accept: "application/json",
-        // "Content-Type": "application/json",
-        // "Access-Control-Allow-Origin": "*",
-      },
-    };
-
     const form = new FormData();
     form.append("Nome", name);
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
-
-    // await axios
-    //   .post(
-    //     "https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e",
-    //     // "https://keffbr.us14.list-manage.com/subscribe/post?&amp;id=b1c7d7f33e",
-    //     {
-    //       FNAME: data.name,
-    //       EMAIL: data.email,
-    //       PHONE: data.phone,
-    //     },
-    //     options,
-    //   )
-    //   .then((res) => {
-    //     console.log("res", res);
-    //   })
-    //   .catch((err) => {
-    //     setMessage("Erro ao enviar formulário", err);
-    //   });
-
-    try {
-      await fetch(
-        "https://keffbr.us14.list-manage.com/subscribe/post?u=ed5da9de447f44d3ebe2fcaf6&amp;id=b1c7d7f33e",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: JSON.stringify(formMail),
-        },
-      );
-      setMessage("Formulário enviado com sucesso!");
-    } catch (err) {
-      setMessage("Erro ao enviar formulário");
-    } finally {
-      setLoading(false);
-    }
 
     // try {
     //   await fetch(
