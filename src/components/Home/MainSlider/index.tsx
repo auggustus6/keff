@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import { FormCompleteContainer } from "../../Form/components/FormComplete";
 import { MailChimpFormContainer } from "../../Form/components/FormComplete/MailChimpForm";
 import * as Styles from "./styles";
 
