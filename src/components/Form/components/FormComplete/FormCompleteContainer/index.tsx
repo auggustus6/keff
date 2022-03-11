@@ -12,6 +12,7 @@ export const FormCompleteContainer = () => {
     email: "",
     phone: "",
     visited: "Não",
+    investment: "1000 a 5000",
   });
 
   const [message, setMessage] = useState("");
@@ -27,6 +28,7 @@ export const FormCompleteContainer = () => {
       email: "",
       phone: "",
       visited: "Sim",
+      investment: "",
     });
   };
 
@@ -35,13 +37,14 @@ export const FormCompleteContainer = () => {
     event.preventDefault();
     // setLoading(true);
 
-    const { name, email, phone, visited } = data;
+    const { name, email, phone, visited, investment } = data;
 
     const form = new FormData();
     form.append("Nome", name);
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
+    form.append("Investimento", investment);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     // try {
