@@ -3,4 +3,5 @@ export type FormDataProps = {
   email: string;
   phone: string;
   visited: string;
+  investment: string;
 };

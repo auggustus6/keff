@@ -23,6 +23,7 @@ export const NewsLetterForm = ({
     email: "",
     phone: "",
     visited: "Não",
+    investment: "1000 a 5000",
   });
 
   const resetForm = () => {
@@ -31,16 +32,20 @@ export const NewsLetterForm = ({
       email: "",
       phone: "",
       visited: "Sim",
+      investment: "",
     });
   };
-  const { name, email, phone, visited } = data;
+  const { name, email, phone, visited, investment } = data;
 
-  // const handleChangeData = (data: FormDataProps) => {
-  //   setData(data);
-  // };
+  console.log("data2", data);
+  console.log("2R$", investment);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    console.log("data", data);
+    console.log("R$", investment);
+
     setLoading(true);
 
     name &&
@@ -58,6 +63,7 @@ export const NewsLetterForm = ({
     form.append("Email", email);
     form.append("Telefone", phone);
     form.append("Encapsulados", visited);
+    form.append("Investimento", investment);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     try {
@@ -80,15 +86,8 @@ export const NewsLetterForm = ({
 
   return (
     <Styles.Container>
-      {/* <div id="mc_embed_signup"> */}
       <h4>Agora você pode criar sua própria marca!</h4>
       <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-        {/* <div id="mc_embed_signup_scroll"> */}
-        {/* <div className="indicates-required">
-              <span className="asterisk">*</span> indicates required
-            </div> */}
-        {/* <div className="mc-field-group"> */}
-        {/* <label htmlFor="mce-FNAME">Nome </label> */}
         <input
           onChange={(e) => setData({ ...data, name: e.target.value })}
           type="text"
@@ -99,11 +98,7 @@ export const NewsLetterForm = ({
           id="mce-FNAME"
           required
         />
-        {/* </div> */}
-        {/* <div className="mc-field-group"> */}
-        {/* <label htmlFor="mce-EMAIL">
-                E-mail <span className="asterisk">*</span>
-              </label> */}
+
         <input
           onChange={(e) => setData({ ...data, email: e.target.value })}
           type="email"
@@ -114,18 +109,7 @@ export const NewsLetterForm = ({
           id="mce-EMAIL"
           required
         />
-        {/* </div> */}
-        {/* <div className="mc-field-group"> */}
-        {/* <label htmlFor="mce-PHONE">Celular </label> */}
-        {/* <input
-            onChange={(e) => setData({ ...data, phone: e.target.value })}
-            type="text"
-            name="PHONE"
-            placeholder="Telefone"
-            className=""
-            value={phone}
-            id="mce-PHONE"
-          /> */}
+
         <InputMask
           name="PHONE"
           id="mce-PHONE"
@@ -135,20 +119,17 @@ export const NewsLetterForm = ({
           required
           mask="+55\ 99 9999 99999"
         />
-        {/* </div> */}
+        <span>Quanto você está disposto a investir nesse projeto?</span>
+        <select
+          required
+          value={investment}
+          onChange={(e) => setData({ ...data, investment: e.target.value })}
+        >
+          <option value="1000 a 5000">de R$1.000,00 a R$5.000,00</option>
+          <option value="5000 a 10000">de R$5.000,00 a R$10.000,00</option>
+          <option value="10000+">mais de R$10.000,00</option>
+        </select>
 
-        {/* <div className="mc-field-group"> */}
-        {/* <label htmlFor="mce-EMAIL">
-                Voce trabalha com encapasulado?{" "}
-                <span className="asterisk">*</span> */}
-        {/* </label> */}
-        {/* <input
-                type="text"
-                // value=""
-                name="FNAME"
-                className=""
-                id="mce-FNAME"
-              /> */}
         <span>Você já trabalha no mercado de encapsulados?</span>
         <select
           required
@@ -158,7 +139,6 @@ export const NewsLetterForm = ({
           <option value="Sim">Sim</option>
           <option value="Não">Não</option>
         </select>
-        {/* </div> */}
 
         <div id="mce-responses" className="clear foot">
           <div
@@ -182,16 +162,6 @@ export const NewsLetterForm = ({
             value=""
           />
         </div>
-        {/* <div className="optionalParent">
-          <div className="clear foot"> */}
-        {/* <input
-              type="submit"
-              value="Enviar"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              className="button"
-              onClick={(e) => handleSubmit(e)}
-            /> */}
 
         <button
           disabled={loading}
@@ -205,11 +175,7 @@ export const NewsLetterForm = ({
         </button>
 
         {message && <span className="form-status">{message}</span>}
-        {/* </div>
-        </div> */}
-        {/* </div> */}
       </form>
-      {/* // </div> */}
     </Styles.Container>
   );
 };
