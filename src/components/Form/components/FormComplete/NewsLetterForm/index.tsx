@@ -37,15 +37,8 @@ export const NewsLetterForm = ({
   };
   const { name, email, phone, visited, investment } = data;
 
-  console.log("data2", data);
-  console.log("2R$", investment);
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
-    console.log("data", data);
-    console.log("R$", investment);
-
     setLoading(true);
 
     name &&
