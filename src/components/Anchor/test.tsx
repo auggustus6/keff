@@ -5,7 +5,7 @@ import Anchor from ".";
 
 describe("<Anchor />", () => {
   it("should render the link", async () => {
-    const { container } = renderWithTheme(<Anchor>LoneWolf</Anchor>);
+    const { container } = renderWithTheme(<Anchor>Keff</Anchor>);
     expect(container.querySelector("a")).toBeInTheDocument();
   });
 });
