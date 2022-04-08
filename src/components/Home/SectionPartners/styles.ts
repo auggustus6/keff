@@ -3,7 +3,8 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background-color: #aeaeae;
+    /* background-color: #aeaeae; */
+    background-color: #9c89ff;
     padding: 9rem 0rem;
   `}
 `;

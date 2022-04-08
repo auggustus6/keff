@@ -3,7 +3,8 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background-color: #707070;
+    /* background-color: #707070; */
+    background-color: #7b62ff;
     padding: 9rem 0rem;
   `}
 `;
@@ -42,5 +43,12 @@ export const ContainerInfo = styled.div`
 export const Image = styled.img`
   ${({ theme }) => css`
     max-width: 70%;
+  `}
+`;
+
+export const ImageBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
   `}
 `;
