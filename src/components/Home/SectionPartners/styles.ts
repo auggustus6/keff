@@ -45,3 +45,10 @@ export const Image = styled.img`
     max-width: 50%;
   `}
 `;
+
+export const ImageBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+  `}
+`;

@@ -49,7 +49,9 @@ export const ContainerInfo = styled.div`
 
 export const ButtonBox = styled.div`
   ${({ theme }) => css`
-    margin-bottom: 92px;
+    ${media.lessThan("small")`
+  margin-bottom: 92px;
+    `}
   `}
 `;
 
@@ -62,6 +64,10 @@ export const ImageBox = styled.div`
 
 export const Image = styled.img`
   ${({ theme }) => css`
+    max-width: 50%;
+
+    ${media.lessThan("small")`
     max-width: 80%;
+    `}
   `}
 `;
