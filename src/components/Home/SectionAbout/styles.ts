@@ -4,7 +4,15 @@ import media from "styled-media-query";
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     padding: 9rem 0rem;
+    background-color: #efebff;
+    ${media.lessThan("medium")`
+    padding: 9rem 0rem 0rem;
+    `}
   `}
+`;
+
+export const WrapperContent = styled.div`
+  ${({ theme }) => css``}
 `;
 
 export const ContainerWrapper = styled.div`
@@ -22,6 +30,7 @@ export const ContainerInfo = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: ${theme.spacings.small};
+    /* background-color: #ded8ff; */
 
     p {
       margin: ${theme.spacings.xsmall} 0;
@@ -38,8 +47,21 @@ export const ContainerInfo = styled.div`
   `}
 `;
 
+export const ButtonBox = styled.div`
+  ${({ theme }) => css`
+    margin-bottom: 92px;
+  `}
+`;
+
+export const ImageBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+  `}
+`;
+
 export const Image = styled.img`
   ${({ theme }) => css`
-    max-width: 50%;
+    max-width: 80%;
   `}
 `;

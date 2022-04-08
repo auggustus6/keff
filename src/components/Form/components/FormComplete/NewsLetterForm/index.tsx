@@ -79,7 +79,11 @@ export const NewsLetterForm = ({
 
   return (
     <Styles.Container>
-      <h4>Agora você pode criar sua própria marca!</h4>
+      <h4>
+        Essa é a sua oportunidade de empreender com a KEFF, a melhor qualidade
+        do mercado com o melhor custo-benefício.
+      </h4>
+      <h5>Preencha o formulário abaixo para ser atendido!</h5>
       <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
         <input
           onChange={(e) => setData({ ...data, name: e.target.value })}
