@@ -24,6 +24,10 @@ const SectionJourney = () => {
               independência financeira ao lado de quem é referência no mercado.
             </Paragraph>
 
+            <Styles.TopButtomImage>
+              <Styles.Image src="/img/icons/icon-12.png" />
+            </Styles.TopButtomImage>
+
             <Button fullWidth backgroundColor="white" color="black">
               <a href="#quero_comecar">
                 <Paragraph size="xlarge" color="black" fontWeight="bold">
@@ -32,7 +36,9 @@ const SectionJourney = () => {
               </a>
             </Button>
           </Styles.ContainerInfo>
-          <Styles.Image src="/img/icons/icon-12.png" />
+          <Styles.SideImageBox>
+            <Styles.Image src="/img/icons/icon-12.png" />
+          </Styles.SideImageBox>
         </Styles.ContainerWrapper>
       </Container>
     </Styles.Wrapper>

@@ -3,7 +3,8 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background-color: #707070;
+    /* background-color: #707070; */
+    background-color: #7b62ff;
     padding: 9rem 0rem;
   `}
 `;
@@ -21,6 +22,7 @@ export const ContainerWrapper = styled.div`
 export const ContainerInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
+    flex: 0.3;
     flex-direction: column;
     margin-left: ${theme.spacings.small};
 
@@ -29,6 +31,7 @@ export const ContainerInfo = styled.div`
     }
 
     ${media.lessThan("medium")`
+    flex: 1;
     margin-left: 0;
 
     h2 {
@@ -41,6 +44,35 @@ export const ContainerInfo = styled.div`
 
 export const Image = styled.img`
   ${({ theme }) => css`
+    max-width: 100%;
+
+    ${media.lessThan("large")`
     max-width: 70%;
+    `}
+    ${media.lessThan("small")`
+    max-width: 80%;
+    `}
+  `}
+`;
+
+export const SideImageBox = styled.div`
+  display: flex;
+  flex: 0.7;
+  ${media.lessThan("large")`
+    flex: 1;
+    display: none;
+  `}
+`;
+
+export const TopButtomImage = styled.div`
+  ${({ theme }) => css`
+    ${media.greaterThan("large")`
+      display: none;
+    `}
+    ${media.lessThan("large")`
+      display: flex;
+      flex: 1;
+      justify-content: center;
+    `}
   `}
 `;

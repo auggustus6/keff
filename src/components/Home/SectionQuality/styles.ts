@@ -56,9 +56,45 @@ export const ContainerInfo = styled.div`
   `}
 `;
 
+// export const Image = styled.img`
+//   ${({ theme }) => css`
+//     max-width: 50rem;
+//     object-fit: contain;
+//   `}
+// `;
+
 export const Image = styled.img`
   ${({ theme }) => css`
-    max-width: 50rem;
-    object-fit: contain;
+    max-width: 100%;
+
+    ${media.lessThan("large")`
+    max-width: 50%;
+    `}
+    ${media.lessThan("small")`
+    max-width: 90%;
+    `}
+  `}
+`;
+
+export const TopImageAndButton = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    ${media.lessThan("large")`
+      display: none;
+    `}
+  `}
+`;
+
+export const BottomImageAndButton = styled.div`
+  ${({ theme }) => css`
+    ${media.greaterThan("large")`
+      display: none;
+    `}
+    ${media.lessThan("large")`
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    `}
   `}
 `;

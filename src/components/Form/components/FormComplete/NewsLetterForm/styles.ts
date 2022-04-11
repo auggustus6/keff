@@ -19,6 +19,10 @@ export const Container = styled(Wrapper)`
       margin-bottom: ${theme.spacings.small};
       font-size: ${theme.font.sizes.xxlarge};
     }
+    h5 {
+      margin-bottom: ${theme.spacings.small};
+      font-size: ${theme.font.sizes.xlarge};
+    }
 
     ${media.lessThan("medium")`
       max-width:none;
