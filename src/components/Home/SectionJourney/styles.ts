@@ -22,6 +22,7 @@ export const ContainerWrapper = styled.div`
 export const ContainerInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
+    flex: 0.3;
     flex-direction: column;
     margin-left: ${theme.spacings.small};
 
@@ -42,13 +43,33 @@ export const ContainerInfo = styled.div`
 
 export const Image = styled.img`
   ${({ theme }) => css`
+    max-width: 100%;
+
+    ${media.lessThan("large")`
     max-width: 70%;
+    `}
+    ${media.lessThan("small")`
+    max-width: 80%;
+    `}
   `}
 `;
 
-export const ImageBox = styled.div`
+export const SideImageBox = styled.div`
+  display: flex;
+  flex: 0.7;
+  ${media.lessThan("large")`
+    display: none;
+  `}
+`;
+
+export const TopButtomImage = styled.div`
   ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
+    ${media.greaterThan("large")`
+      display: none;
+    `}
+    ${media.lessThan("large")`
+      display: flex;
+      justify-content: center;
+    `}
   `}
 `;

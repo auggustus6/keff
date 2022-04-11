@@ -11,6 +11,16 @@ const SectionQuality = () => {
     <Styles.Wrapper>
       <Container>
         <Styles.ContainerWrapper>
+          <Styles.TopImageAndButton>
+            <Styles.Image src="/img/icons/icon-11.png" />
+            <Button style={{ marginTop: 20 }} fullWidth>
+              <a href="#quero_comecar">
+                <Paragraph size="xxlarge" fontWeight="bold" color="white">
+                  GARANTA O SEU FUTURO COM A KEFF
+                </Paragraph>
+              </a>
+            </Button>
+          </Styles.TopImageAndButton>
           <Styles.ContainerInfo>
             <img className="icon-certificate" src="/img/icons/icon-19.png" />
             <Title size="huge" align="center" bold color={theme.colors.primary}>
@@ -50,7 +60,7 @@ const SectionQuality = () => {
               </Paragraph>
             </Styles.Block>
 
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <Styles.BottomImageAndButton>
               <Styles.Image src="/img/icons/icon-11.png" />
               <Button style={{ marginTop: 20 }} fullWidth>
                 <a href="#quero_comecar">
@@ -59,7 +69,7 @@ const SectionQuality = () => {
                   </Paragraph>
                 </a>
               </Button>
-            </div>
+            </Styles.BottomImageAndButton>
           </Styles.ContainerInfo>
         </Styles.ContainerWrapper>
       </Container>

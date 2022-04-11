@@ -41,12 +41,13 @@ const SectionPartners = () => {
                 src="/img/logo-ativa.png"
               />
             </div>
-            <Styles.ImageBox>
+
+            <Styles.TopButtomImage>
               <Styles.Image
                 alt="pote escrito sua marca aqui"
                 src="/img/img-logistic.png"
               />
-            </Styles.ImageBox>
+            </Styles.TopButtomImage>
 
             <Button backgroundColor="white" color="black" fullWidth>
               <a href="#quero_comecar">
@@ -56,6 +57,12 @@ const SectionPartners = () => {
               </a>
             </Button>
           </Styles.ContainerInfo>
+          <Styles.SideImageBox>
+            <Styles.Image
+              alt="pote escrito sua marca aqui"
+              src="/img/img-logistic.png"
+            />
+          </Styles.SideImageBox>
         </Styles.ContainerWrapper>
       </Container>
     </Styles.Wrapper>

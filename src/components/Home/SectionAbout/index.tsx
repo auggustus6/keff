@@ -7,6 +7,7 @@ import Button from "components/Button";
 
 const SectionAbout = () => {
   const theme = useTheme();
+
   return (
     <Styles.Wrapper>
       <Styles.WrapperContent>
@@ -36,12 +37,12 @@ const SectionAbout = () => {
                 fracionamento e elaboração total do produto.
               </Paragraph>
 
-              <Styles.ImageBox>
+              <Styles.TopButtomImage>
                 <Styles.Image
                   alt="pote escrito sua marca aqui"
                   src="/img/pocket.png"
                 />
-              </Styles.ImageBox>
+              </Styles.TopButtomImage>
 
               <Styles.ButtonBox>
                 <Button fullWidth backgroundColor={theme.colors.primary}>
@@ -53,6 +54,13 @@ const SectionAbout = () => {
                 </Button>
               </Styles.ButtonBox>
             </Styles.ContainerInfo>
+
+            <Styles.SideImageBox>
+              <Styles.Image
+                alt="pote escrito sua marca aqui"
+                src="/img/pocket.png"
+              />
+            </Styles.SideImageBox>
           </Styles.ContainerWrapper>
         </Container>
       </Styles.WrapperContent>
