@@ -56,10 +56,23 @@ export const ContainerInfo = styled.div`
   `}
 `;
 
+// export const Image = styled.img`
+//   ${({ theme }) => css`
+//     max-width: 50rem;
+//     object-fit: contain;
+//   `}
+// `;
+
 export const Image = styled.img`
   ${({ theme }) => css`
-    max-width: 50rem;
-    object-fit: contain;
+    max-width: 100%;
+
+    ${media.lessThan("large")`
+    max-width: 50%;
+    `}
+    ${media.lessThan("small")`
+    max-width: 90%;
+    `}
   `}
 `;
 

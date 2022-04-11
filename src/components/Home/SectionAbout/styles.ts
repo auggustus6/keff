@@ -11,10 +11,6 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const WrapperContent = styled.div`
-  ${({ theme }) => css``}
-`;
-
 export const ContainerWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
@@ -39,6 +35,7 @@ export const ContainerInfo = styled.div`
 
     ${media.lessThan("medium")`
     margin-left: 0;
+    flex: 1;
 
     h2 {
     margin-top:${theme.spacings.small};
@@ -62,6 +59,7 @@ export const SideImageBox = styled.div`
     flex: 0.5;
     ${media.lessThan("large")`
     display: none;
+    flex: 1;
     `}
   `}
 `;
@@ -73,6 +71,7 @@ export const TopButtomImage = styled.div`
     `}
     ${media.lessThan("large")`
       display: flex;
+      flex: 1;
       justify-content: center;
     `}
   `}

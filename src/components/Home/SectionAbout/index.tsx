@@ -10,60 +10,58 @@ const SectionAbout = () => {
 
   return (
     <Styles.Wrapper>
-      <Styles.WrapperContent>
-        <Container>
-          <Styles.ContainerWrapper>
-            <Styles.ContainerInfo>
-              <Title size="huge" color={"#9480ff"}>
-                SEU
-              </Title>
-              <Title size="huge" bold color={theme.colors.primary}>
-                SUCESSO
-              </Title>
-              <Title size="huge" color={"#9480ff"}>
-                COMEÇA AQUI
-              </Title>
+      <Container>
+        <Styles.ContainerWrapper>
+          <Styles.ContainerInfo>
+            <Title size="huge" color={"#9480ff"}>
+              SEU
+            </Title>
+            <Title size="huge" bold color={theme.colors.primary}>
+              SUCESSO
+            </Title>
+            <Title size="huge" color={"#9480ff"}>
+              COMEÇA AQUI
+            </Title>
 
-              <Paragraph size="medium" color="black">
-                A Keff é uma indústria farmacêutica que oferece suporte completo
-                com as principais tendências do mercado para você que quer
-                começar o seu próprio negócio
-              </Paragraph>
+            <Paragraph size="medium" color="black">
+              A Keff é uma indústria farmacêutica que oferece suporte completo
+              com as principais tendências do mercado para você que quer começar
+              o seu próprio negócio
+            </Paragraph>
 
-              <Paragraph size="medium" color="black">
-                Desenvolva uma fórmula exclusiva para sua marca de encapsulados.
-                Possuimos um amplo catálogo de opções e auxiliamos na sua
-                escolha. Atendemos pequenas e grandes quantidades, serviços de
-                fracionamento e elaboração total do produto.
-              </Paragraph>
+            <Paragraph size="medium" color="black">
+              Desenvolva uma fórmula exclusiva para sua marca de encapsulados.
+              Possuimos um amplo catálogo de opções e auxiliamos na sua escolha.
+              Atendemos pequenas e grandes quantidades, serviços de
+              fracionamento e elaboração total do produto.
+            </Paragraph>
 
-              <Styles.TopButtomImage>
-                <Styles.Image
-                  alt="pote escrito sua marca aqui"
-                  src="/img/pocket.png"
-                />
-              </Styles.TopButtomImage>
-
-              <Styles.ButtonBox>
-                <Button fullWidth backgroundColor={theme.colors.primary}>
-                  <a href="#quero_comecar">
-                    <Paragraph size="xxlarge" color="white" fontWeight="bold">
-                      QUERO MINHA FÓRMULA
-                    </Paragraph>
-                  </a>
-                </Button>
-              </Styles.ButtonBox>
-            </Styles.ContainerInfo>
-
-            <Styles.SideImageBox>
+            <Styles.TopButtomImage>
               <Styles.Image
                 alt="pote escrito sua marca aqui"
                 src="/img/pocket.png"
               />
-            </Styles.SideImageBox>
-          </Styles.ContainerWrapper>
-        </Container>
-      </Styles.WrapperContent>
+            </Styles.TopButtomImage>
+
+            <Styles.ButtonBox>
+              <Button fullWidth backgroundColor={theme.colors.primary}>
+                <a href="#quero_comecar">
+                  <Paragraph size="xxlarge" color="white" fontWeight="bold">
+                    QUERO MINHA FÓRMULA
+                  </Paragraph>
+                </a>
+              </Button>
+            </Styles.ButtonBox>
+          </Styles.ContainerInfo>
+
+          <Styles.SideImageBox>
+            <Styles.Image
+              alt="pote escrito sua marca aqui"
+              src="/img/pocket.png"
+            />
+          </Styles.SideImageBox>
+        </Styles.ContainerWrapper>
+      </Container>
     </Styles.Wrapper>
   );
 };

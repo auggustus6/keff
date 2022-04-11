@@ -31,6 +31,7 @@ export const ContainerInfo = styled.div`
     }
 
     ${media.lessThan("medium")`
+    flex: 1;
     margin-left: 0;
 
     h2 {
@@ -59,6 +60,7 @@ export const SideImageBox = styled.div`
     display: flex;
     flex: 0.5;
     ${media.lessThan("large")`
+    flex: 1;
     display: none;
     `}
   `}
@@ -71,6 +73,7 @@ export const TopButtomImage = styled.div`
     `}
     ${media.lessThan("large")`
       display: flex;
+      flex: 1;
       justify-content: center;
     `}
   `}
