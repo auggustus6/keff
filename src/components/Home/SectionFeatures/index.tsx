@@ -46,13 +46,6 @@ const SectionFeatures = () => {
       icon: "/img/icons/icon-5.png",
     },
     {
-      id: "6",
-      title: "DESENVOLVIMENTO WEB",
-      description:
-        "A KEFF disponibiliza todo suporte técnico (programador, designer e copywriter) para desenvolver sua plataforma de conversão do produto.",
-      icon: "/img/icons/icon-6.png",
-    },
-    {
       id: "7",
       title: "S.A.C COMPLETO",
       description:
