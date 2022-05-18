@@ -60,7 +60,7 @@ function App({ Component, pageProps }: AppProps) {
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '508279967046196');
+                fbq('init', '842527126718624');
                 fbq('track', 'PageView');
               `
             }
@@ -79,7 +79,7 @@ function App({ Component, pageProps }: AppProps) {
 
 
           <noscript><img height="1" width="1" style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=508279967046196&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=842527126718624&ev=PageView&noscript=1"
           /></noscript>
 
 
