@@ -15,7 +15,7 @@ export default function HomePage() {
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '691552375458645');
+                fbq('init', '971145826890084');
                 fbq('track', 'PageView');
               `}
         </script>
