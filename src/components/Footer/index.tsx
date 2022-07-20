@@ -61,9 +61,15 @@ const Footer = () => {
             <h4>{t("contactUs.letTalk")}</h4>
             <span>{t("contactUs.sendMessage")}</span>
             <Styles.Social>
-              <a href="mailto:sac.keffbr@keffbr.com.br" aria-label="mail">
+              <a href="mailto:sac@keffbr.com.br" aria-label="mail">
                 <img src="/svgs/email.svg" />
-                <span>sac.keffbr@keffbr.com.br</span>
+                <span>sac@keffbr.com.br</span>
+              </a>
+            </Styles.Social>
+            <Styles.Social>
+              <a href="mailto:sac@keffbr.com.br" aria-label="mail">
+                <img src="/svgs/phone.svg" />
+                <span>Tel SAC: (17) 3266-8383</span>
               </a>
             </Styles.Social>
 
