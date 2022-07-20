@@ -84,7 +84,6 @@ export const Block = styled.div`
       }
       span {
       font-size: ${theme.font.sizes.small};
-
       }
     `}
   `}

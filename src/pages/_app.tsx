@@ -46,7 +46,6 @@ function App({ Component, pageProps }: AppProps) {
               `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ed5da9de447f44d3ebe2fcaf6/ab8a7202cab75407f681992f3.js");
             `
             }
-
           </script>
 
           <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>

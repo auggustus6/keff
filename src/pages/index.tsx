@@ -1,6 +1,5 @@
 import Head from "next/head";
 import HomeTemplate from "../templates/HomeTemplate";
-
 export default function HomePage() {
   return (
     <>
