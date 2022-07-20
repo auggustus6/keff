@@ -95,7 +95,7 @@ export const Social = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: ${theme.spacings.xsmall};
+    margin-bottom: ${theme.spacings.xxsmall};
 
     a {
       display: flex;
