@@ -4,6 +4,7 @@ import { FormDataProps } from "components/Form/types";
 import * as Styles from "./styles";
 import InputMask from "react-input-mask";
 import { format } from "date-fns";
+import axios from "axios";
 
 type NewsLetterFormType = {
   status: any;
@@ -22,8 +23,8 @@ export const NewsLetterForm = ({
     name: "",
     email: "",
     phone: "",
-    visited: "Não",
-    investment: "1000 a 5000",
+    // visited: "Não",
+    // investment: "1000 a 5000",
   });
 
   const resetForm = () => {
@@ -31,12 +32,13 @@ export const NewsLetterForm = ({
       name: "",
       email: "",
       phone: "",
-      visited: "Sim",
-      investment: "",
+      // visited: "Sim",
+      // investment: "",
     });
   };
-  const { name, email, phone, visited, investment } = data;
+  const { name, email, phone /* , visited, investment */ } = data;
 
+  console.log("value", data);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
@@ -55,18 +57,16 @@ export const NewsLetterForm = ({
     form.append("Nome", name);
     form.append("Email", email);
     form.append("Telefone", phone);
-    form.append("Encapsulados", visited);
-    form.append("Investimento", investment);
+    // form.append("Encapsulados", visited);
+    // form.append("Investimento", investment);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     try {
-      await fetch(
+      await axios.post(
         "https://script.google.com/macros/s/AKfycbxuBD4OtVlIMuB74bNXNsX9rduKcN2HU0_fdtX7FT1zpo_QLjy_IrcEpG-UlFq5pmGhQg/exec",
-        {
-          method: "POST",
-          body: form,
-        },
+        form,
       );
+      await axios.post("/api/contact", data);
       resetForm();
       setMessage("Dados enviados com sucesso!");
       router.push("cadastro-sucesso");
@@ -116,7 +116,7 @@ export const NewsLetterForm = ({
           required
           mask="+55\ 99 9999 99999"
         />
-        <span>Quanto você está disposto a investir nesse projeto?</span>
+        {/* <span>Quanto você está disposto a investir nesse projeto?</span>
         <select
           required
           value={investment}
@@ -125,9 +125,9 @@ export const NewsLetterForm = ({
           <option value="1000 a 5000">de R$1.000,00 a R$5.000,00</option>
           <option value="5000 a 10000">de R$5.000,00 a R$10.000,00</option>
           <option value="10000+">mais de R$10.000,00</option>
-        </select>
+        </select> */}
 
-        <span>Você já trabalha no mercado de encapsulados?</span>
+        {/* <span>Você já trabalha no mercado de encapsulados?</span>
         <select
           required
           value={visited}
@@ -135,7 +135,7 @@ export const NewsLetterForm = ({
         >
           <option value="Sim">Sim</option>
           <option value="Não">Não</option>
-        </select>
+        </select> */}
 
         <div id="mce-responses" className="clear foot">
           <div

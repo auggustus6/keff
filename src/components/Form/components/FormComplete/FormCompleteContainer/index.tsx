@@ -1,50 +1,51 @@
+// THIS FORM IS DESACTIVATED
 import { FormDataProps } from "../../../types";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { FormCompleteView } from "../index";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { format } from "date-fns";
 
 export const FormCompleteContainer = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [data, setData] = useState<FormDataProps>({
     name: "",
     email: "",
     phone: "",
-    visited: "Não",
-    investment: "1000 a 5000",
+    // visited: "Não",
+    // investment: "1000 a 5000",
   });
 
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading /* , setLoading */] = useState(false);
 
   const handleChangeData = (data: FormDataProps) => {
     setData(data);
   };
 
-  const resetForm = () => {
-    setData({
-      name: "",
-      email: "",
-      phone: "",
-      visited: "Sim",
-      investment: "",
-    });
-  };
+  // const resetForm = () => {
+  //   setData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     visited: "Sim",
+  //     investment: "",
+  //   });
+  // };
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     console.log("data fora??", data);
     event.preventDefault();
     // setLoading(true);
 
-    const { name, email, phone, visited, investment } = data;
+    const { name, email, phone /* , visited, investment */ } = data;
 
     const form = new FormData();
     form.append("Nome", name);
     form.append("Email", email);
     form.append("Telefone", phone);
-    form.append("Encapsulados", visited);
-    form.append("Investimento", investment);
+    // form.append("Encapsulados", visited);
+    // form.append("Investimento", investment);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     // try {
