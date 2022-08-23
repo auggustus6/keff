@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../../../../Container";
+// import { Container } from "../../../../Container";
 import { FormDataProps } from "../../../types";
 import InputMask from "react-input-mask";
 import * as Styles from "./styles";
@@ -50,8 +50,8 @@ const _FormCompleteView = ({
               required
               mask="+55\ 99 9999 99999"
             />
-            <span>Você já trabalha no mercado de encapsulados?</span>
-            <select
+            {/* <span>Você já trabalha no mercado de encapsulados?</span> */}
+            {/* <select
               required
               value={data.visited}
               onChange={(e) =>
@@ -60,7 +60,7 @@ const _FormCompleteView = ({
             >
               <option value="Sim">Sim</option>
               <option value="Não">Não</option>
-            </select>
+            </select> */}
 
             <button
               disabled={loading}

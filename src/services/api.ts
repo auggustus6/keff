@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import axios from "axios";
 
 const api = axios.create({
@@ -37,6 +38,7 @@ api.interceptors.request.use(
 
       if (token) {
         const tokenParse = JSON.parse(token ? token : "");
+        // @ts-ignore
         config.headers["Authorization"] = "Bearer " + tokenParse?.access_token;
       }
     }
