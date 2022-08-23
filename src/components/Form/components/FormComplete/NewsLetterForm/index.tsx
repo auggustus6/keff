@@ -23,8 +23,8 @@ export const NewsLetterForm = ({
     name: "",
     email: "",
     phone: "",
-    visited: "Não",
-    investment: "1000 a 5000",
+    // visited: "Não",
+    // investment: "1000 a 5000",
   });
 
   const resetForm = () => {
@@ -32,11 +32,11 @@ export const NewsLetterForm = ({
       name: "",
       email: "",
       phone: "",
-      visited: "Sim",
-      investment: "",
+      // visited: "Sim",
+      // investment: "",
     });
   };
-  const { name, email, phone, visited, investment } = data;
+  const { name, email, phone /* , visited, investment */ } = data;
 
   console.log("value", data);
   const handleSubmit = async (e: any) => {
@@ -57,8 +57,8 @@ export const NewsLetterForm = ({
     form.append("Nome", name);
     form.append("Email", email);
     form.append("Telefone", phone);
-    form.append("Encapsulados", visited);
-    form.append("Investimento", investment);
+    // form.append("Encapsulados", visited);
+    // form.append("Investimento", investment);
     form.append("Data", format(new Date(), "dd/MM/yyyy"));
 
     try {
